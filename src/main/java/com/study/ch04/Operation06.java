@@ -28,6 +28,7 @@ public class Operation06 {
         System.out.println(name1);
         System.out.println(name2);
         System.out.println(name2);
+        System.out.println("테스트 코드 작성");
 
 
     }
