@@ -8,6 +8,7 @@ public class CarService {
     }
 
     boolean isFull() {
+
         return carRepository.getEmptyIndex() == -1;
     }
 
