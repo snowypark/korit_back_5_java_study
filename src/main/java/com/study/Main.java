@@ -5,6 +5,14 @@ package com.study;
 public class Main {
     public static void main(String[] args) {
 
+        /*
+            접근지정자
+
+            public
+            private
+            protected
+            default
+         */
 
     }
 }

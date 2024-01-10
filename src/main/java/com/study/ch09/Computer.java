@@ -6,8 +6,10 @@ public class Computer extends ElectronicDevice {
 
     void playGame() {
         System.out.println("PC 게임을 합니다.");
+    }
 
-    }void showDeviceState() {
+    // 재정의 - 부모의 메소드와 동일한 메소드의 형태로 실행문만 다시 정의 할 수 있다.
+    void showDeviceState() {
         System.out.print("컴퓨터 ");
         super.showDeviceState();
 
