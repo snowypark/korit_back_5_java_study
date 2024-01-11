@@ -10,3 +10,9 @@ public class Member {
     private String address;
 
 }
+
+/*
+    더 공부하기
+    향상된 for문
+    객체 생성과 리스트 제네릭
+ */

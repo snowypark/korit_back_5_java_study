@@ -8,11 +8,10 @@ import java.util.Scanner;
 public class MemberMain {
     private static ArrayList<Member> members = new ArrayList<>();
 
-    public static String inputSerachName(String label){
+    public static String inputSearchName(String label){
         Scanner scanner = new Scanner(System.in);
         System.out.print(label + " >> ");
         return scanner.nextLine();
-
     }
 
     public static Member findMemberByName(String name) { //ArrayList static으로 공유
@@ -97,14 +96,17 @@ public class MemberMain {
 //                System.out.println(rename);
 
                 System.out.println("[ 회원 이름 수정하기 ]");
-                String serchName = inputSerachName("수정 할 회원의 이름을 입력하세요.");
-                Member findMember = findMemberByName(serchName);
+                String searchName = inputSearchName("수정 할 회원의 이름을 입력하세요.");
+                Member findMember = findMemberByName(searchName);
+
                 if(findMember == null) {
                     continue;
                 }
+
                 System.out.print("이름 >> ");
                 String updateName = scanner.nextLine();
                 findMember.setName(updateName);
+
                 System.out.println("<< 수정이 완료되었습니다. >>");
                 System.out.println();
 
@@ -131,11 +133,14 @@ public class MemberMain {
 //                }
 
                 System.out.println("[ 회원 주소 수정하기 ]");
-                String searchAddress = inputSerachName("수정 할 회원의 이름을 입력하세요.");
+                String searchAddress = inputSearchName("수정 할 회원의 이름을 입력하세요.");
                 Member findMember = findMemberByName(searchAddress);
+
                 if(findMember == null) {
+                    System.out.println("존재하지 않는 이름입니다.");
                     continue;
                 }
+
                 System.out.print("주소 >> ");
                 String updateAddress = scanner.nextLine();
                 findMember.setAddress(updateAddress);
@@ -164,7 +169,7 @@ public class MemberMain {
 
                 System.out.println("[ 회원 이름으로 조회하기 ]");
                 String searchName = null;
-                searchName = inputSerachName("조회 할 회원의 이름을 입력하세요");
+                searchName = inputSearchName("조회 할 회원의 이름을 입력하세요");
 
                 Member findMember = findMemberByName(searchName);
                 if(findMember == null){
@@ -175,7 +180,6 @@ public class MemberMain {
                 System.out.println(findMember);
                 System.out.println("<< 조회가 완료되었습니다. >>");
                 System.out.println();
-
 
             }else if ("5".equals(selectedMenu)) {
                 /*
@@ -225,20 +229,17 @@ public class MemberMain {
                 if(findMember == null){
                     System.out.println("해당 이름의 회원이 존재하지 않습니다");
                     System.out.println();
-
                     continue;
                 }
                 members.remove(findMember);
 //                members.remove(members.indexOf(findMember)); // index로 지우기
-                System.out.println(findMember.toString());
+                System.out.println(findMember);
                 System.out.println("<< 삭제가 완료되었습니다. >>");
                 System.out.println();
 
-            } else {
+                } else {
                 System.out.println("다시 선택하세요");
-
-                }
-
+            }
 
             System.out.println("------------");
             System.out.println("프로그램 종료");
