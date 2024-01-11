@@ -54,7 +54,7 @@ public class MemberMain {
 
                 String name = null;
                 String address = null;
-                System.out.println("[ 회원 등록하기");
+                System.out.println("[ 회원 등록하기 ]");
 
                 System.out.print("이름 >> ");
                 name = scanner.nextLine();
@@ -169,11 +169,11 @@ public class MemberMain {
 
                 System.out.println("[ 회원 이름으로 조회하기 ]");
                 String searchName = null;
-                searchName = inputSearchName("조회 할 회원의 이름을 입력하세요");
+                searchName = inputSearchName("조회 할 회원의 이름을 입력하세요.");
 
                 Member findMember = findMemberByName(searchName);
                 if(findMember == null){
-                    System.out.println("해당 이름의 회원이 존재하지 않습니다");
+                    System.out.println("해당 이름의 회원이 존재하지 않습니다.");
                     continue;
                 }
 
@@ -227,7 +227,7 @@ public class MemberMain {
                     }
                 }
                 if(findMember == null){
-                    System.out.println("해당 이름의 회원이 존재하지 않습니다");
+                    System.out.println("해당 이름의 회원이 존재하지 않습니다.");
                     System.out.println();
                     continue;
                 }
@@ -238,11 +238,11 @@ public class MemberMain {
                 System.out.println();
 
                 } else {
-                System.out.println("다시 선택하세요");
+                System.out.println("다시 선택하세요.");
             }
 
             System.out.println("------------");
-            System.out.println("프로그램 종료");
+            System.out.println("프로그램 종료.");
 
         }
     }
