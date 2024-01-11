@@ -53,8 +53,8 @@ public class LambdaMain {
         System.out.println(result);
 
         String result2 = fx1.andThen(num -> {
-            System.out.println("andThen에 넣은 함수" +num);
-            return "문자열" + num;
+            System.out.println("andThen에 넣은 함수 " +num);
+            return "문자열 " + num;
         }).apply(10);
 
         System.out.println(result2);

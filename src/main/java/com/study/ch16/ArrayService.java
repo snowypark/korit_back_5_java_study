@@ -27,7 +27,8 @@ public class ArrayService {
     }
 
     public String get(int index) {
-     return strArray[index];
+
+        return strArray[index];
     }
 
     public int indexOf(String str) {

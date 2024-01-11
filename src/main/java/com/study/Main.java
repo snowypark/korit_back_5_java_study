@@ -7,11 +7,31 @@ public class Main {
 
         /*
             접근지정자
-
             public
             private
             protected
             default
+         */
+
+        /*
+            싱글톤
+                     public class Printer {
+
+                private static Printer printer = null;
+
+                private Printer(){}
+
+                public static Printer getInstance() {
+                    if(printer == null) {
+                        printer = new Printer();
+                    }
+                    return printer;
+                }
+
+                public void print(String input) {
+                    System.out.println(input);
+                }
+    }
          */
 
     }

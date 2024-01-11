@@ -1,6 +1,6 @@
 package com.study.ch15;
 
-public class sendMain {
+public class SendMain {
     public static void main(String[] args) {
 
         // <> 생략시 object 타입 (생략x)

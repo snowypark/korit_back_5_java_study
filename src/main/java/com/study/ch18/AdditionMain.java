@@ -42,6 +42,5 @@ public class AdditionMain {
         // 3. 매개변수가 1개면 매개변수의 괄호를 생략할 수 있다.
         Viewer viewer3 = viewData -> System.out.println("화멸 출력");
 
-
     }
 }

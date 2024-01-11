@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class StudentListMain {
     public static void main(String[] args) {
-
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student("김준일", 31));
         students.add(new Student("김준이", 32));
@@ -13,39 +12,42 @@ public class StudentListMain {
         students.add(new Student("김준사", 34));
 
         System.out.println(students);
-        System.out.println("--------");
 
-        for(int i = 0; i < students.size(); i++){
+        Student s = new Student("aaa", 10);
+        s.setAge(s.getAge() + 1);
+
+        for(int i = 0; i < students.size(); i++) {
             Student student = students.get(i);
-            students.get(i).setAge(student.getAge() + 1);
+            student.setAge(student.getAge() + 1);
         }
+
+        // 향상된 for
+        for(Student student : students) {
+            student.setAge(student.getAge() + 1);
+        }
+
         System.out.println(students);
 
-        // 향상된  for
-        for(Student student : students){    //처음부터 1개씩 대입
-            student.setAge(student.getAge()+1);
-        }
-        System.out.println(students);
+        students.forEach(student -> student.setAge(student.getAge() + 1));
 
         Student[] studentArray = new Student[4];
-        for(int i = 0; i < studentArray.length; i++){
-            studentArray[i] = new Student("김준일", 31);
+        for(int i = 0; i < studentArray.length; i++) {
+            Student student;
+            student = new Student("김준일", 31);
+//            studentArray[i] = new Student("김준일", 31);
         }
-
-        System.out.println("------");
 
         int i = 0;
         for(Student student : studentArray) {
-            studentArray[i] = new Student("김준일", 31);   //배열주소확인
-//            student.setAge(student.getAge()+i);
-            System.out.println(student);
+            studentArray[i] = new Student("김준일", 31);
             i++;
         }
 
-        // 객체의 주소를 가져옴. new(X) 값 대입x
-//        students.get(0);
-        students.set(0, new Student("김준일",31));
+        for(Student student : studentArray) {
+            System.out.println(student);
+        }
 
+        students.set(0, new Student("김준일", 31));
 
     }
 }
