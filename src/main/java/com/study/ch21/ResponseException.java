@@ -8,6 +8,10 @@ import java.util.Map;
 public class ResponseException extends RuntimeException {
     private Map<String, Object> errorMap;
 
+    public ResponseException(String message) {
+        super(message);
+    }
+
     public ResponseException(String message, Map<String, Object> errorMap) {
         super(message);
         this.errorMap = errorMap;

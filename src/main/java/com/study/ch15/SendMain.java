@@ -18,6 +18,7 @@ public class SendMain {
                                     //extends Member = Member 상속 받은 경우만 가능
                                     //super VipMember = VipMember 와 그 부모(Member)까지만 가능. super 방향 아래->위
     public static void send(SendData<? super VipMember> sendData) {    // <?> 와일드카드 - 리턴 타입 모를때. 제한 가능
+
         sendData.send();
     }
 }

@@ -25,6 +25,7 @@ public class CustomExceptionMain {
                 }catch (IndexOutOfBoundsException e) {
                     e.printStackTrace();
                 }
+
             }else if("2".equals(selectedManu)) {
                 Map<String, Object> errorMap = new HashMap<>();
 
@@ -36,16 +37,20 @@ public class CustomExceptionMain {
             }else {
                 System.out.println("다시 입력");
             }
+
         }catch (IndexOutOfBoundsException e ) {
             e.printStackTrace();
+
         }catch (ResponseException e ) {
             e.printStackTrace();
             System.out.println(e.getErrorMap());
+            System.out.println(e.getMessage());
+
         }catch (Exception e ) {
             e.printStackTrace();
         }
+
         }
             System.out.println("프로그램 종료");
-
     }
 }
