@@ -5,6 +5,10 @@ package com.study;
 public class Main {
     public static void main(String[] args) {
 
+        /*  Test
+            ch19 - builder
+         */
+
         /*
             접근지정자
             public
