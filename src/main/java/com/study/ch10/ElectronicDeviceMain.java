@@ -16,6 +16,7 @@ public class ElectronicDeviceMain {
         ElectronicDevice electronicDevice2 = new ElectronicDevice() {
             @Override
             void showDeviceState() {
+
                 System.out.println("두번째 기기 상태확인");
 
             }

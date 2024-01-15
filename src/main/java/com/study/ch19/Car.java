@@ -26,6 +26,7 @@ public class Car {
         private String color;
 
         public Car build() {              //Carbuild에 담긴 model,color -> Car에 이동 필요
+
             return new Car(model, color); //car 생성자 -> build
         }
 

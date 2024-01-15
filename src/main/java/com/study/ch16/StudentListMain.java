@@ -16,6 +16,8 @@ public class StudentListMain {
         Student s = new Student("aaa", 10);
         s.setAge(s.getAge() + 1);
 
+
+
         for(int i = 0; i < students.size(); i++) {
             Student student = students.get(i);
             student.setAge(student.getAge() + 1);
